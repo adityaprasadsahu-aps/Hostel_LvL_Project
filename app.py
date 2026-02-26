@@ -18,8 +18,7 @@ def submit(name: str = Form(...)):
     name=name.upper()
     if name:
         return RedirectResponse(
-            #url=f'https://erp.silicon.ac.in/estcampus/hostel/db_hostel_attendance.php?oper=CHECK_HOSTEL_ATTENDANCE&studentId={name}',
-            url='https://www.google.com',
+            url=f'https://erp.silicon.ac.in/estcampus/hostel/db_hostel_attendance.php?oper=CHECK_HOSTEL_ATTENDANCE&studentId={name}',
             status_code=302
         )
     return RedirectResponse(url="/", status_code=302)
